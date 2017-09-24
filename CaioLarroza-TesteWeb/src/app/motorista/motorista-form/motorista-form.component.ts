@@ -39,4 +39,6 @@ export class MotoristaFormComponent implements OnInit {
   	console.log(this.motorista);
 }
 
+
+
 }
