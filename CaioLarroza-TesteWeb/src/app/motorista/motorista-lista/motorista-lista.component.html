@@ -2,7 +2,6 @@
 <table class="table table-hover">
     <thead>
       <tr>
-        <th>dddd</th>
         <th>Nome</th>
         <th>CPF</th>
         <th>Data de Nascimento</th>
@@ -13,14 +12,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let m of motorista| async">
-      	<td>{{key}}</td>
         <td>{{m.nomeMoto}}</td>
       	<td>{{m.cpfMoto}}</td>
       	<td>{{m.datanascMoto}}</td>
       	<td>{{m.sexoMoto}}</td>               
       	<td>{{m.carroMoto}}</td>                
       	<td>{{m.statusMoto}}</td>
-        <td><button (click) = "update(m.statusMoto)" class="btn btn-warning">Editar status</button></td>
+        <td><button (click) = "update(m)" class="btn btn-warning">Editar status</button></td>
 
       </tr>
     </tbody>

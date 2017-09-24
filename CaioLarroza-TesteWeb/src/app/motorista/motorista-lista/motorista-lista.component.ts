@@ -9,19 +9,23 @@ import { AngularFireDatabase, FirebaseListObservable  } from 'angularfire2/datab
 export class MotoristaListaComponent implements OnInit {
 
   motorista: FirebaseListObservable<any[]>;
-  constructor(db: AngularFireDatabase) {
-  	this.motorista = db.list('motorista')
+  constructor(private db: AngularFireDatabase) {  	
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+  	this.motorista = this.db.list('motorista')	
+  }
  
   update(motorista){
   	console.log('Foi' + motorista);
-  	if(motorista == 'Ativo'){
+  	if(motorista.statusMoto == 'Ativo'){
   		console.log('Ativo');
-
+  		console.log(motorista);
+  		console.log(motorista.$key);
+  		this.db.object('/motorista/'+motorista.$key).update({statusMoto: 'Inativo'});
+  		console.log(motorista);
   	}else{
-  		console.log('Inativo');
+  		this.db.object('/motorista/'+motorista.$key).update({statusMoto: 'Ativo'});
   	}
   }
 }
