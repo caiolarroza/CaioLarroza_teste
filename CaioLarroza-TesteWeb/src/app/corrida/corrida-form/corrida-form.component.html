@@ -1,0 +1,21 @@
+<h1>Corridas</h1>
+<form #f="ngForm" (submit)="form_submit(f)">
+	<label>Motorista:</label>
+	<select ngModel class="form-control" name="nomeMoto">
+		<ng-container *ngFor="let m of motorista| async">
+			<option *ngIf="m.statusMoto == 'Ativo'" value="{{m.nomeMoto}}">{{m.nomeMoto}}</option>
+		</ng-container>
+  	</select>
+	<br>
+	<label>Passageiro:</label>
+	<select ngModel class="form-control" name="nome">
+       	<option *ngFor="let p of passageiro| async" value="{{p.nome}}">{{p.nome}}</option>	
+  	</select>
+	<br>
+	<label>Preço: </label>
+	<input ngModel class="form-control" type="text" name="preco">
+	<br>
+	<button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+<br>
+<app-corrida-lista></app-corrida-lista>

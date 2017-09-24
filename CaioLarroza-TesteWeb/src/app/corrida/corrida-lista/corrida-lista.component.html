@@ -1,0 +1,17 @@
+<h1>Lista de corridas</h1>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Motorista</th>
+        <th>Passageiro</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of corrida| async">
+      	<td>{{c.nomeMoto}}</td>
+      	<td>{{c.nome}}</td>
+      	<td>{{c.preco}}</td>
+      </tr>
+    </tbody>
+  </table>

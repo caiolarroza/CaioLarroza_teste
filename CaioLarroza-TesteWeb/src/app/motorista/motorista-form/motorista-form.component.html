@@ -1,0 +1,30 @@
+<h1>Motoristas</h1>
+<form #f="ngForm" (submit)="form_submit(f)">
+	<label>Nome:</label>
+	<input ngModel class="form-control" type="text" name="nomeMoto" placeholder="Nome">
+	<br>
+	<label>CPF:</label>
+	<input ngModel class="form-control" type="text" name="cpfMoto" placeholder="Digite seu CPF">
+	<br>
+	<label>Data de Nascimento: </label>
+	<input ngModel class="form-control" type="date" name="datanascMoto">
+	<br>
+	<label>Sexo:</label>
+	<select ngModel class="form-control" name="sexoMoto">
+    	<option selected="">Masculino</option>
+    	<option>Feminino</option>   	
+  	</select>
+  	<br>
+  	<label>Status:</label>
+	<select ngModel class="form-control" name="statusMoto">
+    	<option selected="">Ativo</option>
+    	<option>Inativo</option>   	
+  	</select>
+  	<br>
+	<label>Carro:</label>
+	<input ngModel class="form-control" type="text" name="carroMoto" placeholder="Digite seu carro">
+	<br>
+	<button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+<br>
+<app-motorista-lista></app-motorista-lista>
