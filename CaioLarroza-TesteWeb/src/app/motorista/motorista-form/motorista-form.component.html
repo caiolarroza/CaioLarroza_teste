@@ -1,28 +1,28 @@
 <h1>Motoristas</h1>
 <form #f="ngForm" (submit)="form_submit(f)">
 	<label>Nome:</label>
-	<input ngModel class="form-control" type="text" name="nomeMoto" placeholder="Nome">
+	<input ngModel class="form-control" type="text" name="nomeMoto" placeholder="Nome" required>
 	<br>
 	<label>CPF:</label>
-	<input ngModel class="form-control" type="text" name="cpfMoto" placeholder="Digite seu CPF">
+	<input ngModel class="form-control" type="text" name="cpfMoto" placeholder="Digite seu CPF" required>
 	<br>
 	<label>Data de Nascimento: </label>
-	<input ngModel class="form-control" type="date" name="datanascMoto">
+	<input ngModel class="form-control" type="date" name="datanascMoto" required>
 	<br>
 	<label>Sexo:</label>
-	<select ngModel class="form-control" name="sexoMoto">
+	<select ngModel class="form-control" name="sexoMoto" required>
     	<option selected="">Masculino</option>
     	<option>Feminino</option>   	
   	</select>
   	<br>
   	<label>Status:</label>
-	<select ngModel class="form-control" name="statusMoto">
+	<select ngModel class="form-control" name="statusMoto" required>
     	<option selected="">Ativo</option>
     	<option>Inativo</option>   	
   	</select>
   	<br>
 	<label>Carro:</label>
-	<input ngModel class="form-control" type="text" name="carroMoto" placeholder="Digite seu carro">
+	<input ngModel class="form-control" type="text" name="carroMoto" placeholder="Digite seu carro" required>
 	<br>
 	<button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
